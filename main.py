@@ -144,6 +144,7 @@ def generate_content(category: str, client: OpenAI, retry: bool = False) -> dict
 
         log("INFO", "Parsing JSON response...")
         data = json.loads(raw)
+        print(f"data is {data}")
         log("SUCCESS", "JSON parsed successfully")
 
         # Validate expected keys
