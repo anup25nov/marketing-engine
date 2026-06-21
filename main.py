@@ -111,7 +111,7 @@ def generate_content(category: str, client: OpenAI, retry: bool = False) -> dict
             raw = raw.strip()
 
         data = json.loads(raw)
-        log("SUCCESS", "Content generated successfully")
+        log("SUCCESS", "Content generated successfully", f"{data}")
         return data
 
     except json.JSONDecodeError as e:
